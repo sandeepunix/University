@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent Component with Lifecycle Hooks">
+        <lightning-input class="slds-var-p-around-small" type="checkbox" label="Show Child Component" onchange={changehandler}>
+        </lightning-input> 
+        <template if:true={displayChild}>
+        <c-child-hook></c-child-hook>   
+        </template>
+    </lightning-card> 
+</template>

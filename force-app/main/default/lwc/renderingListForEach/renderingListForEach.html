@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent Component">
+        <ol type="1" class="slds-medium-around_medium">
+            <template for:each={contacts} for:item="item">
+                <li key={item.id}>{item.name},{item.title}</li>
+            </template>
+        </ol>
+    </lightning-card>
+</template>

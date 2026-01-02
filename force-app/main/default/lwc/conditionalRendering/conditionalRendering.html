@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-m-around_medium">
+            <lightning-input type="checkbox" label="show details"  onchange={handleCheckboxChange}></lightning-input>
+            <template if:true={showDetails}>
+                <div class="slds-m-vertical_medium">
+                    Here are the details you wanted to see!
+                </div>
+            </template>  
+            <template if:false={showDetails}>
+                <div class="slds-m-vertical_medium">
+                    Here are the details you dont want to see!
+                </div>
+            </template>  
+        </div>
+    </lightning-card>
+</template>

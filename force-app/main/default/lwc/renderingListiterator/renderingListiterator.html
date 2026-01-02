@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Rendering List using iterator">
+        <ul class="slds-m-around-medium">
+             <template iterator:it= {contacts}>
+                <li key={it.value.id}>
+                    <div if:true={it.first} class="list-first"></div>
+                    {it.value.name}, {it.value.title}
+                    <div if:true={it.last} class="list-last"></div>
+                </li>
+             </template>
+        </ul>
+    </lightning-card>
+</template>
